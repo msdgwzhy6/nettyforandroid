@@ -39,7 +39,6 @@ public class EchoServer {
                         public void initChannel(SocketChannel ch)
                                 throws Exception {
 //                            ch.pipeline().addLast(new DelimiterBasedFrameDecoder(1024, Delimiters.lineDelimiter()));
-                            //READ_TIMEOUT
                             ch.pipeline().addLast(new IdleStateHandler(READ_TIMEOUT,0,0, TimeUnit.SECONDS));
                             ch.pipeline().addLast(new DelimiterBasedFrameDecoder(1024, Unpooled.copiedBuffer("$_".getBytes())));
                             ch.pipeline().addLast(new StringDecoder());

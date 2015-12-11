@@ -15,7 +15,7 @@ import android.util.Log;
 
 
 @ChannelHandler.Sharable
-public class UptimeClientHandler extends ChannelInboundHandlerAdapter {
+public class ClientHandler extends ChannelInboundHandlerAdapter {
 	
 	 static final String ECHO_REQ = "Frome netty client.$_";
 

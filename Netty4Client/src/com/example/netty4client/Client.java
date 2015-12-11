@@ -25,7 +25,7 @@ public class Client {
     static final int WRITE_TIMEOUT = 10;//客户端WRITE_TIMEOUT秒没有向服务器发送消息，则会触发WRITER_IDLE事件，指定0表示不起作用
     static final int ALL_TIMEOUT = 0; //客户端ALL_TIMEOUT秒没有向服务器发送消息和没有接收到服务器消息，则会触发ALL_TIMEOUT事件，指定0表示不起作用
     
-    private static final UptimeClientHandler handler = new UptimeClientHandler();
+    private static final ClientHandler handler = new ClientHandler();
 
     public static Bootstrap configureBootstrap(Bootstrap b) {
         return configureBootstrap(b, new NioEventLoopGroup());
